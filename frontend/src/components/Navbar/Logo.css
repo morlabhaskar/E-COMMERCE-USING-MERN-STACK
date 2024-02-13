@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.logo-parent span {
+    display: flex;
+    /* background-color: rgb(121, 132, 121); */
+    align-items: center;
+}
+.logo-parent span img {
+    height: 2em;
+}
+.logo-title {
+    color: #fff;
+    /* font-size: 9em; */
+    background: linear-gradient(90deg,#0f0,#1899ff,#f0f,#f00,#ff0);
+    /* background: linear-gradient(90deg,#0971c1,rgb(252, 58, 252),rgb(241, 58, 58)); */
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.07em transparent;
+    /* background: -webkit-linear-gradient(90deg,#15ff00, #fbfdfb,#fe4704);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+    
+}
+.logo-title::before {
+    color: #fff;
+    background: linear-gradient(90deg,#0f0,#1899ff,#f0f,#f00,#ff0);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.02em transparent;
+    transform: translate(-10px,-10px);
+    z-index: -1;
+    opacity: 0.25;
+}
+.logo-title::after {
+    color: #fff;
+    background: linear-gradient(90deg,#0f0,#1899ff,#f0f,#f00,#ff0);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.02em transparent;
+    transform: translate(-20px,-20px);
+    z-index: -1;
+    opacity: 0.1;
+    
+}
