@@ -1,0 +1,7 @@
+FloatButton {
+    background-color: brown;
+}
+.ant-float-btn-body {
+    /* border: 2px solid rgb(136, 243, 202); */
+    box-shadow: 2px 2px 5px black;
+}

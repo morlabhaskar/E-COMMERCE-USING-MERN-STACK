@@ -1,3 +1,7 @@
+.activeLink {
+  color: red;
+}
+
 .fixed {
     width: 100%;
     position: fixed;
@@ -9,7 +13,7 @@
   header {
     width: 100%;
     background-color: var(--dark-blue);
-    color: #fff;
+    color: #d00e0e;
   
     .header {
       width: 100%;
