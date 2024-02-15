@@ -15,7 +15,7 @@ export const logo = (
 );
 
 // const activeLink = ({isActive}) => (
-//   isActive ? `${style.active}` : ""
+//   isActive ? `${styles.active}` : ""
 // )
 
 const content = (
@@ -26,6 +26,7 @@ const content = (
 );
 
 const Navbar = () => {
+  //model
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -36,6 +37,9 @@ const Navbar = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  //
+
   return (
 
     <div className='navbar'>
