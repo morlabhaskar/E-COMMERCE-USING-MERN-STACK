@@ -22,22 +22,10 @@ header{
 .logo{
     color: #f1683a;
 }
-header a{
-    font-size: 18px;
-    color: #eee;
-    font-weight: 700;
-    margin-right: 40px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: 0.4s;
-}
-header a:hover{
-    color: #f1683a;
-}
 .carousel{
     height: 90vh;
     margin-top: -50px;
-    /* width: 100vw; */
+    width: 100vw;
     overflow: hidden;
     position: relative;
 }
@@ -102,7 +90,7 @@ header a:hover{
     bottom: 50px;
     left: 50%;
     width: max-content;
-    z-index: 100;
+    z-index: 10;
     display: flex;
     gap: 20px;
 }

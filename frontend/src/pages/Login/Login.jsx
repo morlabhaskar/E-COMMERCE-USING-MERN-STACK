@@ -23,7 +23,7 @@ const Login = () => {
       <div className="container" id="container">
         <div className="form-container sign-up">
             <Form>
-                <h1>CREATE ACCOUNT</h1>
+                <h1>SIGN UP</h1>
                 <div className="social-icons">
                     <a href="#" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" className="icon"><i className="fa-brands fa-facebook-f"></i></a>

@@ -43,12 +43,12 @@ const Navbar = () => {
   return (
 
     <div className='navbar'>
-      <div class="logo">
+      <div className="logo">
         <div>{logo}</div>
 
       </div>
 
-      <nav className="">
+      <nav>
 
         <ul className='pt-3'>
           <Link to='/shop'><li className="link">Shop</li></Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
         </ul>
         <button className="menu-icon " onClick={showModal}>
           <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6H20M4 12H20M13 18H20" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            <path d="M4 6H20M4 12H20M13 18H20" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
           </svg>
         </button>
 
