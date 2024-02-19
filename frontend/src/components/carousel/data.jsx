@@ -29,83 +29,83 @@ export const responsive = {
         imageurl:one,
         name:"One",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:2,
         imageurl:two,
         name:"Two",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:3,
         imageurl:three,
         name:"Three",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:4,
         imageurl:four,
         name:"Four",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:5,
         imageurl:five,
         name:"Five",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:6,
         imageurl:six,
         name:"Six",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:7,
         imageurl:one,
         name:"One",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:8,
         imageurl:two,
         name:"Two",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:9,
         imageurl:three,
         name:"Three",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:10,
         imageurl:four,
         name:"Four",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:11,
         imageurl:five,
         name:"Five",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
     {
         id:12,
         imageurl:six,
         name:"Six",
         price:"$19.23",
-        description:"Some text about the product..."
+        description:"Some text about the product"
     },
   ]

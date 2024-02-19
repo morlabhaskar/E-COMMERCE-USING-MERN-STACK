@@ -5,27 +5,21 @@ import { shortenText } from '../../utils'
 import './Carousel.css';
 
 const CarouselItem = ({ url, name, price, description }) => {
-  
+
   return (
     <div className='image-item'>
-      <Link to="/product-details" className="bank-account">
-        <img
-          className="flag"
-          aria-hidden="true"
-          src={url}
-          // style="object-position: -11px center;"
-          alt="US"
-        />
-        <div>
-          <h2 role="presentation">
-            {`${price}`}
-
-          </h2>
-          <div className="currency">
-          {shortenText(name, 18)}
+      <Link to="/product-details">
+        <div className="bank-account">
+          <img src={url} alt="" />
+          <div className='item-content p-2'>
+            <div className="prices ml-2">
+              <p className='mt-0.5'>$50</p>
+              <h3 className='ml-2'>{price}</h3>
+            </div>
+            <h5 className="product-name">{shortenText(name, 10)}</h5>
+            <p className=''>{shortenText(description, 30)}</p>
+            <Link to="/"><Button>Add to Cart</Button></Link>
           </div>
-          <p>{shortenText(description, 26)}</p>
-          <Button>Add to Cart</Button>
         </div>
       </Link>
     </div>
