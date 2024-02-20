@@ -3,25 +3,24 @@ import Hero from './Hero/Hero'
 import HomeInfo from './HomeInfo/HomeInfo'
 // import { Button } from 'antd'
 import './Home.css'
-import { productData } from '../../components/carousel/data.jsx'
+import { electronics, productData } from '../../components/carousel/data.jsx'
+// import { electronics } from '../../components/carousel/data.jsx'
 import CarouselItem from '../../components/carousel/CarouselItem'
 import ProductCarousel from '../../components/carousel/ProductCarousel.jsx'
 
-
-// const PageHeading = ({ heading, btnText }) => {
-//   return (
-//     <>
-//       <div className="HomeProductSlide-heading-total d-flex justify-content-between">
-//         <h2 className="HomeProductSlide-head">{heading}</h2>
-//         <Button className="HomeProductSlide-btn">{btnText}</Button>
-//       </div>
-//       <hr />
-//     </>
-//   )
-// }
-
 const Home = () => {
+  //latest products
   const productss = productData.map((item) => (
+    <div key={item.id}>
+      <CarouselItem
+        name={item.name}
+        url={item.imageurl}
+        price={item.price}
+        description={item.description}
+      />
+    </div>
+  ))
+  const electronicss = electronics.map((item) => (
     <div key={item.id}>
       <CarouselItem
         name={item.name}
@@ -44,11 +43,11 @@ const Home = () => {
       </section>
 
       <section>
-        {/* <PageHeading heading={"Latest Products"} btnText={"Show More >>"} /> */}
         <ProductCarousel products={productss} />
       </section>
-
-
+      <section className='mt-0'>
+        <ProductCarousel electronics={electronicss} />
+      </section>
 
     </div>
   )

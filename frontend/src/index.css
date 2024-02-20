@@ -5,3 +5,7 @@ FloatButton {
     /* border: 2px solid rgb(136, 243, 202); */
     box-shadow: 2px 2px 5px black;
 }
+.ant-float-btn-circle {
+    background-color: rgb(244, 146, 65);
+    color: #fff;
+}

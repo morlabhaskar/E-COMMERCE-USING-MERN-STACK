@@ -1,6 +1,7 @@
-
-
 .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   display: inline-flex;
   flex: 0 0 auto;
@@ -9,11 +10,21 @@
   width: 100%;
   flex-wrap: wrap;
 }
+
 .action-buttons button {
   outline: none;
 }
 
+.HomeProductSlide-head {
+  color: #163300;
+  font-family: monospace;
+}
 
+.latest-products-head-left .HomeProductSlide-btn {
+  background-color: blue;
+  color: white;
+
+}
 .action-button {
   color: #163300;
   border-radius: 1rem;
@@ -27,7 +38,7 @@
   white-space: nowrap;
   align-items: center;
   text-decoration: none;
-  background-color: #65cf21; 
+  background-color: #65cf21;
 }
 
 
@@ -46,21 +57,18 @@
   outline: none;
   width: 2rem;
   height: 2rem;
-  background-color: rgb(253, 170, 69);
+  background-color: rgb(251, 140, 42)
 }
 
 @media screen and (max-width: 768px) {
   .action-button--horizontal-scroll {
-      display: none;
+    display: none;
   }
 }
 
-.action-button--horizontal-scroll:hover {
-  background-color: rgb(189, 250, 22);
-}
-
 .action-button--horizontal-scroll:active {
-  background-color: rgb(253, 170, 69);
+  background-color: rgb(56, 81, 244);
+  color: #fff;
 }
 
 .action-button--horizontal-scroll:disabled {
@@ -85,91 +93,12 @@
   transform: rotate(90deg);
 }
 
-.action-button:hover {
-  background-color: var(--secondary-hover);
+.image-slider {
+  background-color: rgb(255, 255, 255);
 }
-
-.action-button--primary {
-  background-color: var(--accent);
-}
-
-.action-button--primary:hover {
-  background-color: var(--accent-hover);
-}
-
-.action-button--primary:active {
-  background-color: var(--accent-active);
-}
-
-/* #bank-accounts {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-  flex-direction: row;
-  overflow: auto;
-  background-color: #9c9c67;
-}
-.image-item {
-  background-color: #0e0f0c;
-  padding: 1.5rem;
-  height: 28rem;
-  border-radius: 1rem;
-}
-.image-item a {
-  color: azure;
-  text-decoration-line: none;
-}
-.bank-account {
-  background-color: #65cf21;
-  appearance: none;
-  position: relative;
-  background: red;padding: 3px;
-  border-radius: 1rem;
-  height: 18rem;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  width: 13rem;
-  display: flex;
-  flex: 0 0 13rem;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  scroll-snap-align: start;
-}
-.bank-account img {
-  object-position: -11px center;
-}
-.flag {
-  object-fit: cover;
-}
-
-.bank-account h2 {
-  color: var(--content-primary);
-  font-size: 1.375rem;
-  letter-spacing: normal;
-  overflow-wrap: normal;
-  white-space: nowrap;
-  font-weight: 700;
-  line-height: 1.25rem;
-}
-
-.bank-account .currency {
-  color: var(--content-primary);
-  font-size: .875rem;
-  font-weight: 400;
-  letter-spacing: -.006em;
-  line-height: 133%;
-}
-
-.container {
-  max-width: 50rem;
-  width: 100%;
-  min-width: 20rem;
-  margin: 7.5rem auto;
-} */
 
 #bank-accounts {
-  
+
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -177,59 +106,59 @@
   height: 34rem;
   padding: 0.5rem;
 }
+
 .image-item {
-  background-color: #a9aaac;
+  background-color: #dcddde;
   border-radius: 1rem;
   overflow: hidden;
   padding: 2px;
+  width: 15rem;
 }
+
 .image-item a {
   color: #000000;
   text-decoration-line: none;
 }
-.bank-account {
 
-}
 .bank-account img {
-  height: 20rem;
+  max-height: 20rem;
+  max-width: 15rem;
+  min-width: 15rem;
+  object-fit: contain;
+  cursor: pointer;
   border-top-left-radius: 0.9rem;
-  border-top-right-radius: 0.9rem;  
+  border-top-right-radius: 0.9rem; 
+}
+.back-account .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 15rem;
+  min-width: 15rem;
+  overflow: hidden;
+}
+.item-content  {
+  z-index: 100;
 }
 .item-content Button {
   width: 100%;
   background-color: #f78b10;
   color: #fff;
 }
+
 .item-content .prices {
   display: flex;
 }
+
 .item-content .prices p {
   font-size: 1rem;
   color: #666764;
   text-decoration: line-through;
 }
+
 .item-content .prices h3 {
+  font-weight: 400;
+  letter-spacing: -.006em;
   font-size: 1.5rem;
   color: #000000;
 }
-/* .flag {
-  object-fit: cover;
-} */
-
-/* .bank-account h2 {
-  color: var(--content-primary);
-  font-size: 1.375rem;
-  letter-spacing: normal;
-  overflow-wrap: normal;
-  white-space: nowrap;
-  font-weight: 700;
-  line-height: 1.25rem;
-} */
-
-/* .bank-account .currency {
-  color: var(--content-primary);
-  font-size: .875rem;
-  font-weight: 400;
-  letter-spacing: -.006em;
-  line-height: 133%;
-} */
