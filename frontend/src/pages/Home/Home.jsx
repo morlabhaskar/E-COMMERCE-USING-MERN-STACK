@@ -40,17 +40,19 @@ const Home = () => {
       <Hero />
       </section>
       
+
+      <section>
+        <ProductCarousel products={productss} />
+      </section>
+      
       <section>
         <HomeInfo />
       </section>
 
       <section>
-        <ProductCarousel products={productss} />
-      </section>
-
-      <section>
         <ProductCarousel2 electronics={electronicss}/>
       </section>
+      
     </div>
   )
 }

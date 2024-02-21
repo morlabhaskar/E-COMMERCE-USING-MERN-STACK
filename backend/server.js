@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const userRoute = require("./routes/userRoute.js")
+const errorHandler = require("./middleware/errormiddleware.js")
+
 
 const app = express();
 
@@ -37,13 +39,20 @@ app.use("/api/users",userRoute)
 
 
 
+//error middleware
+app.use(errorHandler);
+
+
 const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+    console.log(`Server Running on port ${PORT}`)
+})
 
 mongoose
     .connect(process.env.MONGO_URL)
     .then(()=> {
-        app.listen(PORT, () => {
-            console.log(`Server Running on port ${PORT}`)
-        })
+        console.log("DB is Connected!")
+        
     })
     .catch((err) => console.log(err))

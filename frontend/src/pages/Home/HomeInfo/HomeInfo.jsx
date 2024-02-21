@@ -34,15 +34,9 @@ const HomeInfo = () => {
     <div>
       <div className="head">
         <h1>Best Products</h1>
-        <h1>Why choose us</h1>
         <hr />
       </div>
       <div className="contents">
-        {names.map((name, id) => (
-          <div key={id}>
-            <h1>{name}</h1>
-          </div>
-        ))}
       </div>
     </div>
   );

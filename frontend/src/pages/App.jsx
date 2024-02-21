@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Login from "./Login/Login.jsx";
@@ -9,53 +9,53 @@ import './App.css'
 
 
 function App() {
-  useEffect(()=>{
+
+  useEffect(() => {
     const body = document.body;
-			const progressBar = document.querySelector('.progress__bar');
-			console.log(progressBar)
-            const updateProgress = () => {
-				let scrollPos =
-					(window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
-                console.log(scrollPos)
-                progressBar.style.width = `${scrollPos}%`;
-				requestAnimationFrame(updateProgress);
-			};
+    const progressBar = document.querySelector('.progress__bar');
+    console.log(progressBar)
+    const updateProgress = () => {
+      let scrollPos = (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
+      console.log(scrollPos)
+      progressBar.style.width = `${scrollPos}%`;
+      requestAnimationFrame(updateProgress);
+    };
+    updateProgress()
+  }, [])
 
-			updateProgress()
 
-  },[])
 
   return (
     <>
-    <div className="progress__wrapper">
-			<div className="progress__bar"></div>
-		</div>
+      <div className="progress__wrapper">
+        <div className="progress__bar"></div>
+      </div>
       <BrowserRouter>
-        <Navbar/>
-          <Routes>
-              <Route 
-                  path="/" 
-                  element={
-                     <Home/>
-                  }
-              />
-              <Route 
-                  path="/login" 
-                  element={
-                    <Login/>
-                  } 
-              />
-              <Route 
-                  path="/shop" 
-                  element={
-                    <Shop/>
-                  } 
-              />
-          </Routes>
-        <Footer/>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Login />
+            }
+          />
+          <Route
+            path="/shop"
+            element={
+              <Shop />
+            }
+          />
+        </Routes>
+        <Footer />
       </BrowserRouter>
-      
-        
+
+
     </>
   )
 }
