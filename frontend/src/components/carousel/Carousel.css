@@ -94,7 +94,7 @@
 }
 
 .image-slider {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(184, 178, 178);
 }
 
 #bank-accounts {
@@ -108,11 +108,12 @@
 }
 
 .image-item {
-  background-color: #dcddde;
+  background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
   padding: 2px;
   width: 15rem;
+  border: 1px solid grey;
 }
 
 .image-item a {
@@ -122,6 +123,7 @@
 
 .bank-account img {
   max-height: 20rem;
+  min-height: 20rem;
   max-width: 15rem;
   min-width: 15rem;
   object-fit: contain;
@@ -135,7 +137,11 @@
   align-items: center;
   max-width: 15rem;
   min-width: 15rem;
+  min-height: 20rem;
+  max-height: 20rem;
   overflow: hidden;
+  background-color: #000000;
+  padding: 2px;
 }
 .item-content  {
   z-index: 100;
@@ -162,3 +168,28 @@
   font-size: 1.5rem;
   color: #000000;
 }
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* productcarousel2 */
+#action-button--previous2 {
+  margin-left: auto;
+  transform: rotate(-90deg);
+}
+
+#action-button--next2 {
+  transform: rotate(90deg);
+}
+
+#bank-accounts2 {
+
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  overflow: auto;
+  height: 34rem;
+  padding: 0.5rem;
+}
+

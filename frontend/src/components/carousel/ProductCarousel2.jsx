@@ -7,11 +7,11 @@ import { Button } from 'antd';
 import 'slick-carousel';
 import { Link } from 'react-router-dom';
 
-const ProductCarousel = ({ products }) => {
+const ProductCarousel2 = ({ electronics }) => {
     useEffect(() => {
-        const bankAccounts = document.getElementById('bank-accounts');
-        const scrollLeftButton = document.getElementById('action-button--previous');
-        const scrollRightButton = document.getElementById('action-button--next');
+        const bankAccounts = document.getElementById('bank-accounts2');
+        const scrollLeftButton = document.getElementById('action-button--previous2');
+        const scrollRightButton = document.getElementById('action-button--next2');
         let isDown = false;
         let startX;
         let startY;
@@ -83,19 +83,19 @@ const ProductCarousel = ({ products }) => {
                 </div>
                 <div className="latest-products-head-left">
                     <Link to="/shop"><Button className="HomeProductSlide-btn mr-3">Show More<svg width="16" className='ml-2 mb-1' height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M21.343 10.543 12.77 1.972a.829.829 0 0 0-1.2 0L3 10.543l1.2 1.2 7.114-7.114v17.657h1.715V4.63l7.114 7.114 1.2-1.2Z"></path></svg></Button></Link>
-                    <button type="button" disabled id="action-button--previous" className="action-button--horizontal-scroll mr-2">
+                    <button type="button" disabled id="action-button--previous2" className="action-button--horizontal-scroll mr-2">
                         <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path></svg>
                     </button>
-                    <button type="button" id="action-button--next" className="action-button--horizontal-scroll mr-4">
+                    <button type="button" id="action-button--next2" className="action-button--horizontal-scroll mr-4">
                         <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24"><path d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z"></path></svg>
                     </button>
                 </div>
             </div>
-            <div id="bank-accounts">
-                {products}
+            <div id="bank-accounts2">
+                {electronics}
             </div>
         </div>
         </>
     )
 }
-export default ProductCarousel
+export default ProductCarousel2
