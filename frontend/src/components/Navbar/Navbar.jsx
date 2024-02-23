@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Logo.css";
 import "./Navbar.css"
 import logoimg from "../../assets/img/logo.png"
@@ -37,9 +37,6 @@ const Navbar = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-
-  //
-
   return (
 
     <div className='navbar'>
@@ -61,7 +58,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        
+
 
 
       </nav>
