@@ -7,7 +7,6 @@ const generateToken = () => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 };
 
-
 // --------------------------------------------------------------------------------------------
 //Register User
 const registerUser = asyncHandler(async (req, res) => {
@@ -64,7 +63,6 @@ const registerUser = asyncHandler(async (req, res) => {
   // res.send("Register User...");
 });
 
-
 // ------------------------------------------------------------------
 //login
 const loginUser = asyncHandler(async (req, res) => {
@@ -78,7 +76,6 @@ const loginUser = asyncHandler(async (req, res) => {
   if (!user) {
     res.status(400);
     throw new Error("User does not exist");
-
   }
 
   //user exists,check if password is correct
@@ -107,25 +104,57 @@ const loginUser = asyncHandler(async (req, res) => {
 
 // --------------------------------------------------------------------
 //logout user
-const logout = asyncHandler(async (req,res) => {
-  res.cookie("token","", {
-    path:'/',
-    httpOnly:true,
-    expires:new Date(0),
+const logout = asyncHandler(async (req, res) => {
+  res.cookie("token", "", {
+    path: "/",
+    httpOnly: true,
+    expires: new Date(0),
   });
-  return res.status(200).json({message:"Successfully Logged Out"})
+  return res.status(200).json({ message: "Successfully Logged Out" });
 });
 
-
 //get user
-const getUser = asyncHandler (async (req,res) => {
+const getUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id).select("-password");
   if (user) {
     res.status(200).json(user);
-  }
-  else {
+  } else {
     res.status(400);
     throw new Error("User Not Found");
+  }
+});
+
+
+//Get Login Status
+const getLoginStatus = asyncHandler(async (req, res) => {
+  const token = req.cookies.token;
+  if (!token) {
+    return res.json(false);
+  }
+  //verify Token
+  const verified = jwt.verify(token, process.env.JWT_SECRET);
+  if (verified) {
+    res.json(true);
+  } else {
+    res.json(false);
+  }
+});
+
+
+//Update User
+const updateUser = asyncHandler (async(req,res) => {
+  const user = await User.findById(req.user._id);
+  if(user) {
+    const {name,phone,address} = user;
+    user.name = req.body.name || name
+    user.phone = req.body.phone || phone
+    user.address = req.body.address || address
+
+    const updateUser = await user.save();
+    res.status(200).json(updateUser);
+  } else {
+    res.status(404);
+    throw new Error("User not found");
   }
 })
 
@@ -134,5 +163,7 @@ module.exports = {
   registerUser,
   loginUser,
   logout,
-  getUser
+  getUser,
+  getLoginStatus,
+  updateUser
 };
