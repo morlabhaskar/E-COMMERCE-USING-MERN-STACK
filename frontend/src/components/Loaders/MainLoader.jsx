@@ -1,14 +1,21 @@
 import React from 'react'
 import "./MainLoader.css"
+import ReactDOM from 'react-dom';
 
 const MainLoader = () => {
-  return (
+  return ReactDOM.createPortal(
     <div className='loader-parent'>
         <span className='loader'></span>
+    </div>,
+    document.getElementById("loader")
+  );
+};
 
+export const Spinner = () => {
+  return (
+  <div className='central-all'>
+        <span className='loader'></span>
     </div>
-        
-    
   )
 }
 

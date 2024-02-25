@@ -6,6 +6,8 @@ import Shop from "../components/Shop/Shop.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import { useEffect } from "react";
 import './App.css'
+// import MainLoader from "../components/Loaders/MainLoader.jsx";
+// import {Spinner} from '../components/Loaders/MainLoader.jsx'
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
         <div className="progress__bar"></div>
       </div>
       <BrowserRouter>
+      {/* <MainLoader/> */}
+      {/* <Spinner/> */}
         <Navbar />
         <Routes>
           <Route
